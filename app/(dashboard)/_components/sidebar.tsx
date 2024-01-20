@@ -1,5 +1,5 @@
-import { Logo } from "./logo";
-import { SidebarRoutes } from "./sidebar-routes";
+import { Logo } from "./logo"
+import { SidebarRoutes } from "./sidebar-routes"
 
 export const Sidebar = () => {
   return (
@@ -11,5 +11,5 @@ export const Sidebar = () => {
         <SidebarRoutes />
       </div>
     </div>
-  );
-};
+  )
+}
