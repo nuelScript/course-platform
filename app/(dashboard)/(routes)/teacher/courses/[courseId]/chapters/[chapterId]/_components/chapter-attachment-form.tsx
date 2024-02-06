@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import { FileUpload } from "@/components/file-upload";
 
 interface AttachmentFormProps {
-  initialData: Course & Chapter & { attachments: Attachment[] };
+  initialData: Chapter & { attachments: Attachment[] };
   courseId: string;
   chapterId: string;
 }

@@ -5,7 +5,7 @@ import { db } from "@/lib/db";
 
 export async function POST(
   req: Request,
-  { params }: { params: { chapterId: string } }
+  { params }: { params: { chapterId: string; courseId: string } }
 ) {
   try {
     const { userId } = auth();
@@ -18,6 +18,7 @@ export async function POST(
     const chapterOwner = await db.chapter.findUnique({
       where: {
         id: params.chapterId,
+        courseId: params.courseId,
       },
     });
 
@@ -30,7 +31,7 @@ export async function POST(
         url,
         name: url.split("/").pop(),
         chapterId: params.chapterId,
-        courseId: userId,
+        courseId: params.courseId,
       },
     });
 
